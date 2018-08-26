@@ -1,0 +1,67 @@
+﻿@using Sajt.BiznisSloj.DTO
+@model Sajt.Models.Application.PocetnaViewModel
+@{
+    /**/
+
+    ViewBag.Title = "Recepti";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll" data-image-src=""></div>
+    <img src="~/Content/images/p4.jpg" />
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="section_title">Najbolji recepti</h2>
+        </div>
+    </div>
+    <div class="row offers_items">
+         @foreach (RecipesDto recepti in Model.Recepti)
+            {
+                <div class="col-lg-6 offers_col">
+                    <div class="offers_item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="offers_image_container">
+
+                                    <div class="offers_image_background" style="background-image: url(/Content/images/@recepti.Src)"></div>
+                                    <div class="offer_name">@recepti.Name</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="offers_content">
+                                  
+                                    <div class="rating_r rating_r_4 offers_rating">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </div>
+                                    <p class="offers_text">@recepti.Text</p>
+                                    <div class="offers_icons">
+                                        <ul class="offers_icons_list">
+                                            <li class="offers_icons_item"><img src="/Content/images/post.png" alt=""></li>
+                                            <li class="offers_icons_item"><img src="/Content/images/compass.png" alt=""></li>
+                                            <li class="offers_icons_item"><img src="/Content/images/bicycle.png" alt=""></li>
+                                            <li class="offers_icons_item"><img src="/Content/images/sailboat.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    @*<div class="offers_link"><a href="offers.html">read more</a></div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+    </div>
+</div>
+
+

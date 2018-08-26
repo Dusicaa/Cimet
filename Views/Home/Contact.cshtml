@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+}
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll">
+
+        <img src="~/Content/images/p4.jpg" />
+    </div>
+   
+</div>
+
+<!-- Contact -->
+
+<div class="contact_form_section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Contact Form -->
+                <div class="contact_form_container">
+                    <div class="contact_title text-center">Kontakt</div>
+                @using (Html.BeginForm("Contact","Home"))
+                {
+                    @Html.AntiForgeryToken()
+                    <input type="text" id="contact_form_name" name="Name"class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
+                    <input type="text" id="contact_form_email" name="Email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
+                    <input type="text" id="contact_form_subject" name="Subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
+                    <textarea id="contact_form_message" class="text_field contact_form_message" name="Message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
+                    <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Pošalji poruku<span></span><span></span><span></span></button>
+                }
+                       
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿@using Sajt.BiznisSloj.DTO
+@model Sajt.Models.Application.PocetnaViewModel
+
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll">
+        <img src="~/Content/images/p4.jpg" />
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="section_title">Blogovi</h2>
+        </div>
+    </div>
+    <div class="row offers_items">
+        @foreach (BlogDto blog in Model.Blog)
+        {
+            <div class="col-lg-6 offers_col">
+                <div class="offers_item">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="offers_image_container">
+
+                                <div class="offers_image_background" style="background-image: url(/Content/images/@blog.Src)"></div>
+                                <div class="offer_name">@blog.Name</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="offers_content">
+
+                                <div class="offers_text">  @blog.Text</div>
+                                <div class="offers_link">@blog.Date_created</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </div>
+</div>
+
+
+<div class="footer_blog_title">  @Html.ActionLink("Blog", "Blog", "Home")</div>

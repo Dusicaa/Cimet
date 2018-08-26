@@ -1,0 +1,39 @@
+﻿@using Sajt.BiznisSloj.DTO
+@model IEnumerable<Sajt.BiznisSloj.DTO.AboutDto>
+
+@{
+    ViewBag.Title = "About";
+}
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll"></div>
+    <img src="~/Content/images/p4.jpg" />
+</div>
+
+<!-- Intro -->
+
+
+<div class="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="intro_title text-center">Dušica Cakić</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="intro_text text-center">
+              @foreach (var xyz in Model)
+              {
+
+                  <p>@xyz.Text</p>
+                  <img src="~/Content/images/@xyz.Src" alt="@xyz.Alt" width="40%" height="40%"/>
+              }
+                  
+                  @Html.ActionLink("Dokumentacija","Dokumentacija","Home") 
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+

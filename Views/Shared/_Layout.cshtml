@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@Html.Partial("Partials/_Head")
+<body>
+    <div class="super_container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Top Bar -->
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex flex-row">
+
+                            <div class="social">
+                                <ul class="social_list">
+
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li class="social_list_item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="user_box ml-auto">
+                                <div class="social">
+                                    @Html.Partial("_LoginPartial")
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            @Html.Partial("Partials/_Navigation")
+        </header>
+
+        @Html.Partial("Partials/_Menu_trans_500")
+
+        <!-- Home -->
+        <div class="sredina">
+            @RenderBody()
+
+        </div>
+        <!-- Footer -->
+
+        @Html.Partial("Partials/_Footer")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>
+

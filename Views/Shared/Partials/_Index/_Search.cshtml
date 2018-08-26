@@ -1,0 +1,27 @@
+﻿@model Sajt.Models.Application.PocetnaViewModel
+<div class="container fill_height">
+    <div class="row fill_height">
+        <div class="col fill_height">
+
+            <!-- Search Tabs -->
+
+            <div class="search_tabs_container">
+                <div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+                    @foreach (var item in Model.Recepti)
+                    {
+                        <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><a href=""><i><small>@item.Name</small></i></a></div>
+                    }
+                
+                </div>
+            </div>
+
+            <div id="tab_content">
+                <!-- Tab content: to be updated by the Ajax call -->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
