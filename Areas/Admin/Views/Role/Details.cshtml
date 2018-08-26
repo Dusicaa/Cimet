@@ -1,0 +1,31 @@
+﻿@model Sajt.BiznisSloj.DTO.RoleDto
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll">
+
+        <img src="~/Content/images/contact_background.jpg" />
+    </div>
+</div>
+<div>
+    <h4>Detalji</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

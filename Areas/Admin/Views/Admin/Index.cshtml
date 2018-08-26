@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll">
+
+        <img src="~/Content/images/p4.jpg" />
+    </div>
+</div>
+
+    <ul >
+        <li >@Html.ActionLink("Uloge", "Index", "Role")</li>
+        <li >@Html.ActionLink("Blog", "Index", "Blog")</li>
+        <li >@Html.ActionLink("Slike", "Index", "picture")</li>
+
+
+    </ul>
+

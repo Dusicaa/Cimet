@@ -1,0 +1,46 @@
+﻿@model Sajt.BiznisSloj.DTO.PictureDto
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll">
+
+        <img src="~/Content/images/p4.jpg" />
+    </div>
+</div>
+
+<div>
+    <h4>Detalji:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Src)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Src)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alt)
+        </dd>
+        <dd>
+          <img src="~/Content/images/@Model.Src" alt="@Model.Alt" width="100" height="80"/>
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PictureId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

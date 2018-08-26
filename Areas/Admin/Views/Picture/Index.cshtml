@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Sajt.BiznisSloj.DTO.PictureDto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+    <div class="home_background parallax-window" data-parallax="scroll">
+
+        <img src="~/Content/images/p4.jpg" />
+    </div>
+</div>
+
+    <p>
+        @Html.ActionLink("Create New", "Create", "Picture")
+    </p>
+
+<table class="table">
+    <tr>
+
+
+        <th>
+            Slika:
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alt)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+
+
+
+        <td>
+            <img src="~/Content/images/@item.Src" alt="@item.Alt"width="100" height="80" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alt)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.PictureId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.PictureId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.PictureId })
+        </td>
+    </tr>
+    }
+
+</table>

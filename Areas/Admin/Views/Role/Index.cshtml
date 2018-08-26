@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Sajt.BiznisSloj.DTO.RoleDto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+<div class="home_background parallax-window" data-parallax="scroll">
+
+    <img src="~/Content/images/contact_background.jpg" />
+</div>
+</div>
+
+
+<p>
+    @Html.ActionLink("Dodaj ulogu", "Create","Role")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+          
+            @Html.ActionLink("Edit", "Edit", new {uuid = item.Id}) |
+            @Html.ActionLink("Details", "Details", new {uuid = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", new {uuid = item.Id})
+        </td>
+    </tr>
+}
+
+</table>
