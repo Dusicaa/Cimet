@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6bca6c591ae242cc8cefaaddc18f1b2a" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="Model.C__MigrationHistory" Width="1.5" PointX="10.875" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.about" Width="1.5" PointX="8.125" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetRoles" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserClaims" Width="1.5" PointX="5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserLogins" Width="1.5" PointX="7" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUsers" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.blog" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.comments" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.gallery" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.picture" Width="1.5" PointX="0.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.recipes" Width="1.5" PointX="3.125" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.slider" Width="1.5" PointX="11" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_about_picture" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_blog_user" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_comments_user" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_blog_picture" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_comments_blog" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_gallery_picture" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__slider__picture___4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__slider__picture___4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_recipes_picture" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
